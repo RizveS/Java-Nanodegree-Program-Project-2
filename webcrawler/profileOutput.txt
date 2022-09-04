@@ -1,0 +1,10 @@
+Run at Sun, 4 Sep 2022 20:53:13 GMT
+com.udacity.webcrawler.SequentialWebCrawler#crawl took 0m 1s 741ms
+com.udacity.webcrawler.parser.PageParserImpl#parse took 0m 1s 728ms
+jdk.proxy2.$Proxy28#crawl took 0m 1s 741ms
+
+Run at Sun, 4 Sep 2022 20:54:15 GMT
+com.udacity.webcrawler.ParallelWebCrawler#crawl took 0m 1s 749ms
+com.udacity.webcrawler.parser.PageParserImpl#parse took 0m 1s 735ms
+jdk.proxy2.$Proxy28#crawl took 0m 1s 749ms
+

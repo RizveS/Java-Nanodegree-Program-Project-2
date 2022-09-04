@@ -1,0 +1,149 @@
+# Created at 2022-09-04T15:45:58.741
+Exiting self fork JVM. Received SHUTDOWN command from Maven shutdown hook.
+Thread dump before exiting the process (22840@LAPTOP-5MR63NEV):
+"main" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@16.0.1/java.lang.Throwable.fillInStackTrace(Native Method)
+        at java.base@16.0.1/java.lang.Throwable.fillInStackTrace(Throwable.java:798)
+        at java.base@16.0.1/java.lang.Throwable.<init>(Throwable.java:293)
+        at java.base@16.0.1/java.lang.Exception.<init>(Exception.java:85)
+        at java.base@16.0.1/java.lang.ReflectiveOperationException.<init>(ReflectiveOperationException.java:76)
+        at java.base@16.0.1/java.lang.ClassNotFoundException.<init>(ClassNotFoundException.java:78)
+        at java.base@16.0.1/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:636)
+        at java.base@16.0.1/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:182)
+        at java.base@16.0.1/java.lang.ClassLoader.loadClass(ClassLoader.java:519)
+        at app//com.google.common.truth.StackTraceCleaner.loadClass(StackTraceCleaner.java:287)
+        at app//com.google.common.truth.StackTraceCleaner.isFromClassDirectly(StackTraceCleaner.java:261)
+        at app//com.google.common.truth.StackTraceCleaner.isTruthEntrance(StackTraceCleaner.java:210)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:89)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+        at app//com.google.common.truth.StackTraceCleaner.clean(StackTraceCleaner.java:150)
+
+"Reference Handler" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@16.0.1/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+        at java.base@16.0.1/java.lang.ref.Reference.processPendingReferences(Reference.java:243)
+        at java.base@16.0.1/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:215)
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.base@16.0.1/java.lang.Object.wait(Native Method)
+        at java.base@16.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@16.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+        at java.base@16.0.1/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:171)
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" 
+   java.lang.Thread.State: RUNNABLE
+
+"Notification Thread" 
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@16.0.1/java.lang.Object.wait(Native Method)
+        at java.base@16.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@16.0.1/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+        at java.base@16.0.1/java.lang.Thread.run(Thread.java:831)
+        at java.base@16.0.1/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:134)
+
+"surefire-forkedjvm-command-thread" 
+   java.lang.Thread.State: RUNNABLE
+        at java.management@16.0.1/sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at java.management@16.0.1/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:197)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:649)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.access$400(ForkedBooter.java:82)
+        at app//org.apache.maven.surefire.booter.ForkedBooter$4.update(ForkedBooter.java:340)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.callListeners(CommandReader.java:423)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:364)
+        at java.base@16.0.1/java.lang.Thread.run(Thread.java:831)
+
+
+
