@@ -31,8 +31,8 @@ public final class ConfigurationLoader {
     // TODO: Fill in this method.
     try (BufferedReader JSONReader = Files.newBufferedReader(this.path)) { 
     CrawlerConfiguration config = read(JSONReader);
-    }
     return config;
+    }
   }
 
   /**
