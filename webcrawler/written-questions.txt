@@ -10,6 +10,8 @@ Q1. Run the web crawler using the configurations located at src/main/config/writ
     the ParallelWebCrawler.
 
     Why did the parser take more time when run with ParallelWebCrawler?
+    The time profiled by the parser is for the total time spent for the method. Since ParallelWebCrawler visits more profiles and runs the parser 
+    many times in parallel, the profiled time is more for the ParallelWebCrawler.
 
 
 Q2. Your manager ran your crawler on her old personal computer, using the configurations from Q1, and she notices that
@@ -17,22 +19,44 @@ Q2. Your manager ran your crawler on her old personal computer, using the config
 
     (a) Suggest one reason why the sequential web crawler was able to read more web pages than the parallel crawler.
         (Hint: Try setting "parallelism" to 1 in the JSON configs to simulate your manager's computer.)
+	For a single-core computer, parallelism is achieved through instruction-level parallelism. From a high-level perspective,
+	there is an incurred cost to creating and managing thread forks and joins. In the case of a single-core, the sequential
+	crawler can perform faster because it doesn't incur the computational overhead of managing these threads. Moreover,
+	for a sequential crawler, we do not need to regulate access to shared data structures.
 
     (b) Suggest one scenario in which the parallel web crawler will almost certainly perform better than the sequential
         crawler. Why will it perform better?
+	A computer utilizing multiple cores can more effectively take advantage of the parallel crawler. The overhead of creating and managing
+	threads can be weighed against the performance gain of computing in parallel. This is because unlike a single-core, we now have multiple cores
+	that support computing needs.
 
 
 Q3. Analyze your method profiler through the lens of Aspect Oriented Programming, by answering the following questions:
 
     (a) What cross-cutting concern is being addressed by the com.udacity.webcrawler.profiler.Profiler class?
+	The cross-cutting concern being addressed is the run time of methods shared across threads. For example, the PageParser method is used
+	by all the threads and is dominant in determining total runtime of the program.
 
     (b) What are the join points of the Profiler in the web crawler program?
+	The join points of the profiler are the method invocations.
 
 
 Q4. Identify three (3) different design patterns used in this project, and explain which interfaces, classes, and/or
     libraries use or implement those design patterns.
+    Factory -> PageParserFactory
+    Builder -> CrawlResult.Builder
+    Singleton -> ForkJoin.commonPool()
 
     For each pattern, name one thing about the pattern that you LIKED, and one thing you DISLIKED. If you did not like
     anything, you can name two things you disliked.
+    
+    Factory -> Allows for simple constructor calls. Can be customized to provide for a simple constructor interface. CONS: Not applicable in all
+    scenarios. Requires finding common values passed to all constructor calls.
+
+    Builder -> Allows for greater customization. Avoids long constructor calls. CONS: Requires writing a lot of code on the backend
+	(Implementation is more complex than interface)
+
+    Singleton -> Regulates access to the underlying object and all code utilizes one shared resource. CONS: Mutable code is not always a good idea
+    
 
 

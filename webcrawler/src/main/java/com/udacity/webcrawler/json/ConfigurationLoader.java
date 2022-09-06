@@ -29,9 +29,9 @@ public final class ConfigurationLoader {
    */
   public CrawlerConfiguration load() throws IOException{
     // TODO: Fill in this method.
-    BufferedReader JSONReader = Files.newBufferedReader(this.path);
+    try (BufferedReader JSONReader = Files.newBufferedReader(this.path)) { 
     CrawlerConfiguration config = read(JSONReader);
-    JSONReader.close();
+    }
     return config;
   }
 

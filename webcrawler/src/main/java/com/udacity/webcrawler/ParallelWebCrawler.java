@@ -67,7 +67,7 @@ final class ParallelWebCrawler implements WebCrawler {
      pageParserFactory);
 
     for (String url: startingUrls) {
-        ForkJoinPool.commonPool().invoke(crawlTaskFactory.get(url, maxDepth));
+        this.pool.invoke(crawlTaskFactory.get(url, maxDepth));
     }
     
     

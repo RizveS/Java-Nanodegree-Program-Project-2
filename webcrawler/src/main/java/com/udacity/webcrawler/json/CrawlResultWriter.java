@@ -31,9 +31,10 @@ public final class CrawlResultWriter {
    * @param path the file path where the crawl result data should be written.
    */
   public void write(Path path) throws IOException {
-      BufferedWriter JSONWriter = Files.newBufferedWriter(path);
+
+      try(BufferedWriter JSONWriter = Files.newBufferedWriter(path)) {
       write(JSONWriter);
-      JSONWriter.close();
+      }
   }
 
   /**

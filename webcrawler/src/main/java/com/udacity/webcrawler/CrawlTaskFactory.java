@@ -37,8 +37,8 @@ public class CrawlTaskFactory {
         PageParserFactory parserFactory
     ) {
         this.clock = clock;
-        this.counts = counts;
-        this.visitedUrls = visitedUrls;
+        this.counts = Collections.synchronizedMap(counts);
+        this.visitedUrls = Collections.synchronizedSet(visitedUrls);
         this.deadline = deadline;
         this.ignoredUrls = ignoredUrls;
         this.parserFactory = parserFactory;
@@ -79,8 +79,8 @@ public class CrawlTaskFactory {
         PageParser.Result result,
         int maxDepth, CrawlTaskFactory crawltaskFactory) {
                 this.url = url;
-                this.visitedUrls = Collections.synchronizedSet(visitedUrls);
-                this.counts = Collections.synchronizedMap(counts);
+                this.visitedUrls = visitedUrls;
+                this.counts = counts;
                 this.result = result;
                 this.crawlTaskFactory = crawltaskFactory;
                 this.MaxDepth = maxDepth;
@@ -93,10 +93,11 @@ public class CrawlTaskFactory {
            
 
            synchronized(counts) {
+           Map<String,Integer> TempStore = counts;
            for (Map.Entry<String,Integer> e: result.getWordCounts().entrySet()) {
 
                     counts.compute(e.getKey(), 
-                    (k,v) -> counts.containsKey(k)? v + e.getValue(): e.getValue());
+                    (k,v) -> TempStore.containsKey(k)? v + e.getValue(): e.getValue());
                 }
            }
 

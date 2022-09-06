@@ -36,27 +36,26 @@ final class ProfilingMethodInterceptor implements InvocationHandler {
     //       ProfilingState methods.
 
         //Checks if the annotation present on this class is of the profiled type. If so, we can proceed to the other logic
-        Instant StartTime = clock.instant();
         Throwable ThrownExceptionError = null;
         Object result = new Object();
+        Instant StartTime = clock.instant();
         try {
         result = method.invoke(objectInstance, args);
+        return result;
         }
         catch (InvocationTargetException e) {
-          ThrownExceptionError = e.getCause();
+          throw e.getCause();
         }
-
+        catch (IllegalAccessException e) {
+          throw new RuntimeException(e);
+        }
+        finally {
+        if (method.isAnnotationPresent(Profiled.class)) {
         Instant EndTime = clock.instant();
         Duration elapsedTime = Duration.between(StartTime, EndTime);
-        if (method.isAnnotationPresent(Profiled.class)) {
         state.record(objectInstance.getClass(), method, elapsedTime);
         }
-        if ( ThrownExceptionError == null) {
-            return result;
-        }
-        else {
-          throw ThrownExceptionError;
-        }
+      }
     
   }
 }
