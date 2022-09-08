@@ -18,3 +18,8 @@ com.udacity.webcrawler.ParallelWebCrawler#crawl took 0m 10s 127ms
 com.udacity.webcrawler.parser.PageParserImpl#parse took 0m 10s 45ms
 jdk.proxy2.$Proxy28#crawl took 0m 10s 128ms
 
+Run at Tue, 6 Sep 2022 21:47:03 GMT
+com.udacity.webcrawler.ParallelWebCrawler#crawl took 0m 10s 78ms
+com.udacity.webcrawler.parser.PageParserImpl#parse took 0m 10s 25ms
+jdk.proxy2.$Proxy28#crawl took 0m 10s 78ms
+

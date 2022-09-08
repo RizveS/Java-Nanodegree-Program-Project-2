@@ -58,6 +58,11 @@ public class CrawlTaskFactory {
         if (visitedUrls.contains(url))  {
             return new CrawlTaskEnd();
         }
+        else {
+            synchronized(visitedUrls) {
+            visitedUrls.add(url); //Will add url to visitedUrls and then go onto call the recursive version of CrawlTask, CrawlTaskRecurse.
+            }
+        }
         
         PageParser.Result result = parserFactory.get(url).parse();
         return new CrawlTaskRecurse(url, visitedUrls, counts, result, maxDepth,this);

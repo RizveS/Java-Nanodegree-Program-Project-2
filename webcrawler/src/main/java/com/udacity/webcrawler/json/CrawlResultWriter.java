@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.util.Objects;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -32,7 +33,7 @@ public final class CrawlResultWriter {
    */
   public void write(Path path) throws IOException {
 
-      try(BufferedWriter JSONWriter = Files.newBufferedWriter(path)) {
+      try(BufferedWriter JSONWriter = Files.newBufferedWriter(path,StandardOpenOption.CREATE)) {
       write(JSONWriter);
       }
   }
